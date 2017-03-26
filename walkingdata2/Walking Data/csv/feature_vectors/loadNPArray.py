@@ -47,8 +47,15 @@ def fitKNN():
     # KNN with Cross Validation, works?
     X_train, X_test, y_train, y_test = train_test_split(df, response_vector, test_size=.3, random_state=0)
     print('Shapes', X_train.shape, X_test.shape, np.array(y_train).shape, np.array(y_test).shape)
-    clf = knn.fit(X_train, y_train)
-    print(clf.score(X_test, y_test))
+    print('X_train type: ', type(X_train), 'X_test type:', type(X_test))
+    print('Y_train type: ', type(y_train), 'y_test type:', type(y_test))
+    np.savetxt('X_train', X_train, delimiter=',')
+    np.savetxt('X_test', X_test, delimiter=',')
+    np.savetxt('y_train', y_train, delimiter=',')
+    np.savetxt('y_test', y_test, delimiter=',')
+
+    #clf = knn.fit(X_train, y_train)
+    #print(clf.score(X_test, y_test))
 
 
 def load_fv():
@@ -102,11 +109,11 @@ def split_normalization(normalized, fvSizes):
         data.insert(0, 'subject', i+1)
 
         # pd.DataFrame(val).to_csv('./normalized/' + str(i+1) + '_with_subject.csv', header=False, index=False)
-        data.to_csv('./normalized/' + str(i+1) + '_with_subject.csv', header=header, index=False)
-        df = df.append(data, ignore_index=True) # works correctly
+        # data.to_csv('./normalized/' + str(i+1) + '_with_subject.csv', header=header, index=False)
+        # df = df.append(data, ignore_index=True) # works correctly
 
     # Numpy does not like headers
-    df.to_csv('./normalized/all_user_with_subject.csv', header=header, index=False)
+    # df.to_csv('./normalized/all_user_with_subject.csv', header=header, index=False)
 
 
 def load_np_array(allFV, files):

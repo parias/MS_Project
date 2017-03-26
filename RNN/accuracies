@@ -1,12 +1,2 @@
-run 1
-1 - (7.3%) = 92.7%
-   batch_size = 1000
-   epoch = 5000
-   num_hidden = 24
-   
-run 2
-1 - (1.5%) = 98.5%
-   batch_size = 200
-   epoch = 5000
-   num_hidden = 24
-
+100,5000,22,79.5
+100,5000,24,80.5

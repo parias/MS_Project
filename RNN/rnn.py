@@ -93,7 +93,7 @@ def rnn(batch_size, epoch, num_hidden):
     sess.close()
 
 if __name__ == '__main__':
-    batch_size = int(sys.argv[2])
     epoch = int(sys.argv[1])
+    batch_size = int(sys.argv[2])
     num_hidden = int(sys.argv[3])
     rnn(batch_size, epoch, num_hidden)
