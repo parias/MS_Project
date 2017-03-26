@@ -5,7 +5,6 @@ import sys
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-from random import shuffle
 
 train_input = []
 train_output = []
