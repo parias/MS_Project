@@ -1,0 +1,21 @@
+1) Reimage plots for CNN
+
+Refractor plot.py to plot_image.py to replot images. Needs to take single csv(original data) files and plot to images. Prior methodology needed 1 original data csv file, in a folder by itself, in order to create images to the specific folder. Each folder had user data. 
+
+Now I should 
+   - read all csv files
+   - use file name to create images
+   - send image/s to specific user/images folder with filename = user_image#.png
+   - convert all images to jpg (may need another script to do this. used linux bash script before)
+
+2) Add features to things FVs?
+
+Add features to FV's, normalize, then re-classify with classification.r
+ 
+3) LSTM & RNN
+
+Look for usable RNN and LSTM in R/TensorFlow/sklearn
+
+4) Write M.S. Defense paper.
+
+Write M.S. Defense paper. Defense will be March 20 - March 25 (2017).
